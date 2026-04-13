@@ -1,0 +1,22 @@
+# Fox HPC — for trening og batch-prosessering, ikke live inferens
+backend: mediapipe
+backend_options:
+  model_complexity: 2
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+classifier:
+  type: knn
+  model_path: models/knn_classifier.pkl
+
+training:
+  dataset_path: /fp/projects01/ec403/coachnasarus/datasets/yoga_poses/
+  output_model: models/knn_classifier.pkl
+  test_split: 0.2
+  random_seed: 42
+  n_neighbors: 5
+
+batch:
+  input_dir: /fp/projects01/ec403/coachnasarus/reference_videos/
+  output_templates: templates/
+  frames_per_pose: 30

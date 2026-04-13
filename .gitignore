@@ -1,0 +1,25 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Data and models — keep small templates, ignore large files
+data/sample_videos/*.mp4
+data/sample_videos/*.mov
+data/sample_videos/*.avi
+!data/sample_videos/.gitkeep
+models/*.pkl
+models/*.pt
+models/*.onnx
+!models/.gitkeep
+
+# Session logs
+sessions/
+*.log

@@ -1,0 +1,13 @@
+{
+  "_comment": "Example reference template for tadasana (mountain pose). Replace with real values from scripts/build_templates.py run on actual reference data.",
+  "angles": {
+    "left_elbow": 175.0,
+    "right_elbow": 175.0,
+    "left_shoulder": 15.0,
+    "right_shoulder": 15.0,
+    "left_hip": 175.0,
+    "right_hip": 175.0,
+    "left_knee": 175.0,
+    "right_knee": 175.0
+  }
+}

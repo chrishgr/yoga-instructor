@@ -1,0 +1,33 @@
+# High-quality local — for kraftigere maskiner (desktop eller laptop med GPU)
+backend: mediapipe
+backend_options:
+  model_complexity: 2        # tyngste MediaPipe-varianten
+  min_detection_confidence: 0.6
+  min_tracking_confidence: 0.6
+
+classifier:
+  type: knn
+  model_path: models/knn_classifier.pkl
+
+tracker:
+  min_hold_seconds: 1.0
+  smoothing_window: 7
+
+deviation:
+  templates_dir: templates/
+  metric: procrustes         # mer robust, litt dyrere
+
+audio:
+  enabled: true
+  base_frequency: 220.0
+  max_frequency: 880.0
+
+video_source:
+  type: webcam
+  device: 0
+  target_fps: 30
+
+display:
+  show_landmarks: true
+  show_overlay: true
+  window_title: coachNasarus (HQ)

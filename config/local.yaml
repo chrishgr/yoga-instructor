@@ -1,0 +1,34 @@
+# Default local config — CPU, lett modell, webkamera
+backend: mediapipe
+backend_options:
+  model_complexity: 1        # 0=lite, 1=full, 2=heavy
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+classifier:
+  type: rule_based           # rule_based | knn | mlp
+  model_path: null
+
+tracker:
+  min_hold_seconds: 1.0
+  smoothing_window: 5
+
+deviation:
+  templates_dir: templates/
+  metric: angle              # angle | procrustes
+
+audio:
+  enabled: true
+  base_frequency: 220.0      # Hz
+  max_frequency: 880.0
+
+video_source:
+  type: webcam               # webcam | file | image_dir
+  device: 0
+  path: null
+  target_fps: 30
+
+display:
+  show_landmarks: true
+  show_overlay: true
+  window_title: coachNasarus
